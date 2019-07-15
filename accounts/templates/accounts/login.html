@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block navbar %}
+<div class="nab_list" id="navbarNav">
+    <ul class="">
+        <li class="scroll"><a href="{% url 'we-are-hiring' %}">We Are Hiring</a> </li>
+        <li class="scroll"><a href="{% url 'about' %}">About</a></li>
+        <li class="scroll"><a href="{% url 'team' %}">Team</a></li>
+        <li class="scroll"><a href="{% url 'portfolio' %}">Portfolio </a> </li>
+        <li class="scroll"><a href="{% url 'partners' %}">Partners</a> </li>
+        <li class="scroll active"><a href="{% url 'wallet'%}">Private Sale</a> </li>
+        <li class="scroll"><a href="{% url 'contact'%}">Contact</a> </li>
+    </ul>
+</div>
+{% endblock navbar %}
+{% block content %}
+<div class="container">
+    <div class="cover_Text" style="padding: 10% 10% 10% 10%; text-align: center !important">
+        <div class="row">
+        <div class="col-sm-3 flip-left"></div>
+            <div class="col-sm-6 flip-left">
+                <div class="row text-center">
+                <div class="news-letter" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                    <h4 style="color: #fff;text-shadow: 1px 1px 5px #00395d;">Buy Crowdnext tokens with BTC / ETH</h4>
+                    <form method="POST" action="{% url 'login' %}">
+                        {% csrf_token %}
+                        <span id="reauth-email" class="reauth-email"></span>
+                        {% if error %}
+                        {{ error }}
+                        <br />
+                        <br />
+                        {% endif %}
+                        <input type="text" name="username" placeholder="Username" required autofocus>
+                        <input type="password" name="password" placeholder="password" required>
+                        <button type="submit">LOG IN</button>
+                    </form>
+                </div>
+                </div>
+                <div class="row text-center" style="padding: 30px">
+                <div class="col-sm-6"><a href="{% url 'signup' %}" style="color: #fff;text-shadow: 1px 1px 5px #00395d;">Register an Account</a></div>
+                <div class="col-sm-6"><a href="{% url 'admin_password_reset' %}" style="color: #fff;text-shadow: 1px 1px 5px #00395d;">Forget Password</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

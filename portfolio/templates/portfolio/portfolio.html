@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load front_tags %}
+
+{% block navbar %}
+<div class="nab_list" id="navbarNav">
+    <ul class="">
+        <li class="scroll"><a href="{% url 'we-are-hiring' %}">We Are Hiring</a> </li>
+        <li class="scroll"><a href="{% url 'about' %}">About</a></li>
+        <li class="scroll"><a href="{% url 'team' %}">Team</a></li>
+        <li class="scroll active"><a href="{% url 'portfolio' %}">Portfolio </a> </li>
+        <li class="scroll"><a href="{% url 'partners' %}">Partners</a> </li>
+        <li class="scroll"><a href="{% url 'wallet'%}">Private Sale</a> </li>
+        <li class="scroll"><a href="{% url 'contact'%}">Contact</a> </li>
+    </ul>
+</div>
+{% endblock navbar %}
+
+{% block content %}
+<div class="container ">
+          <div class="cover_Text">
+              <div class="row">
+                  <h1>Portfolios</h1>
+              </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Content -->
+      <div id="content">
+        <section class="album py-5 bg-light padding-top-100 padding-bottom-80">
+          <div class="container">
+            <div class="sm-intro">
+              <h2>Angel Portfolio</h2>
+            </div>
+              <div class="row">
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_20.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_21.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_22.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_23.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_24.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_25.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_26.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+              </div>
+          </div>
+        </section>
+
+         <section id="portfolio" class="community-sec padding-top-100 padding-bottom-80 ">
+              <div class="container" >
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="sm-intro">
+                       <h2>News</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                  <div class="owl-carousel owl-theme text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_6.png' %}">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Using smart contracts, Crowdnext wants to offer the opportunity to replace the traditional Venture Capital systems with a powerful one using the Blockchain technology.</p>
+                                <a href="https://www.money-finance.net/crowdnext-a-crowd-venture-capital-with-blockchain-bringing-first-of-its-kind-of-liquid-vc-fund/">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_7.png' %}">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Crowdnext is next Generation Crowd Venture Funding on Ethereum Network. Using smart contracts, Crowdnext wants to offer the opportunity to replace the traditional Venture.</p><a href="">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_8.png' %}" style="padding-top: 40px">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Crowdnext is said to be the latest crowd venture funding program launch, something this crowd has been waiting for. It wants to use blockchain technology to replace the conventional Venture Capital systems with a more outsourced one.</p><a href="https://marketersmedia.com/crowdnext-crowd-venture-capital-with-blockchain/273095">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_18.png' %}">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Using smart contracts, Crowdnext wants to offer the opportunity to replace the traditional Venture Capital systems with a powerful one using the Blockchain technology.</p><a href="https://www.money-finance.net/crowdnext-a-crowd-venture-capital-with-blockchain-bringing-first-of-its-kind-of-liquid-vc-fund/">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_19.png' %}">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Crowdnext is next Generation Crowd Venture Funding on Ethereum Network. Using smart contracts, Crowdnext wants to offer the opportunity to replace the traditional Venture Capital systems with a powerful one using the Blockchain technology.</p><a href="https://article.wn.com/view/2017/11/27/Crowdnext_Crowd_Venture_Capital_with_Blockchain/">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+
+          <!-- Development -->
+        <section class="dev-activ text-center padding-top-100 padding-bottom-100" id="activity">
+          <div class="container" data-aos="fade-up"
+         data-aos-anchor-placement="center-bottom">
+            <div class="sm-intro">
+              {% front_edit "Caption_heading, Im root!" %}
+              <h2>Development Activity</h2>
+              {% end_front_edit  %}
+              {% front_edit "Caption_Paragraph, Im root!" %}
+              <p>We at CrowdNext have been building Crowd Venture Capital powered by Blockchain Technology experiences for a very long time now. In that time we have gained a vast amount of experience and knowledge.</p>
+              {% end_front_edit  %}
+            </div>
+            <!--<ul class="row margin-top-50 margin-bottom-50">
+              <li class="col"> <i class="flaticon-rotate"></i> <span><span class="counter">4</span> hrs Ago</span>
+                <p>Last Update</p>
+              </li>
+              <li class="col"><i class="flaticon-building"></i> <span><span class="counter">10</span> Days Ago</span>
+                <p>Last Block Found</p>
+              </li>
+              <li class="col"><i class="flaticon-money-1"></i> <span><span class="counter">45057</span>+</span>
+                <p>Contributions</p>
+              </li>
+              <li class="col"><i class="flaticon-team"></i> <span  class="counter">80</span>
+                <p>Team Members</p>
+              </li>
+            </ul>
+            <a href="#." class="btn">Start on GitHub</a> <a href="#." class="btn btn-inverse">White Paper</a> </div>-->
+        </section>
+{% endblock content %}

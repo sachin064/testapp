@@ -1,0 +1,299 @@
+
+html {
+	height: 100%;
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 13px;
+	color: #333;
+	background-color: #eff3f6;
+	overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+}
+a:hover,
+a:active,
+a:focus {
+	text-decoration: none;
+	color: #009ce7;
+	outline: none;
+}
+.form-control {
+	border-radius: 0;
+	box-shadow: none;
+	height: 40px;
+}
+.form-control:focus {
+	border-color: #ff9b44;
+	box-shadow: none;
+	outline: 0 none;
+}
+a {
+	color: #009ce7;
+}
+input,
+button,
+a {
+	transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	-ms-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+}
+input,
+button {
+	outline: none;
+}
+input[type="file"] {
+	height: auto;
+}
+input[type=text],
+input[type=password] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+textarea.form-control {
+	resize: vertical;
+}
+.navbar-nav > li {
+	float: left;
+}
+.input-lg.form-control {
+	border-radius: 4px;
+	height: 46px;
+}
+.input-sm.form-control {
+	height: 30px;
+	border-radius: 0;
+}
+.input-group .form-control {
+	height: 34px;
+}
+.input-group.input-group-lg .form-control {
+	height: 46px;
+}
+
+
+
+/*-----------------
+	Login
+-----------------------*/
+ 
+.account-title {
+	font-size: 32px;
+	font-weight: normal;
+	margin: 60px 0 40px;
+	text-align: center;
+}
+.account-box {
+	margin: 0 auto;
+	width: 518px;
+    height: 370px;
+	box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+
+}
+.svgContainer { 
+    width:150px;
+    margin-left:50px;
+      
+}
+.account-wrapper {
+	background-color: #fff;
+	padding: 30px;
+}
+.account-logo {
+	margin-bottom: 20px;
+	text-align: center;
+        margin-left: 20px;
+}
+.account-box .form-group {
+	margin-bottom: 25px;
+}
+.account-box .account-btn {
+	background: #35312e;
+	border-radius: 0;
+	font-size: 22px;
+	padding: 10px 26px;
+	border: 0;
+}
+.account-box .account-btn:hover,
+.account-box .account-btn:focus {
+	border: 0;
+	opacity: 0.8;
+}
+.account-box a {
+	color: #323232;
+	font-size: 13px;
+}
+.account-box a:hover {
+	color: #ff9b44;
+}
+.account-box .form-control {
+	background-color: #f8fafc;
+	border: 1px solid #dfe3e9;
+	height: 50px;
+}
+.account-box label {
+	color: #7f8fa4;
+	font-size: 16px;
+	font-weight: normal;
+}
+.account-logo img {
+	width: 190px;
+}
+
+.titlelg { 
+    text-align:center;
+    font-size: 16px;
+    color: #666;
+    font-weight: normal;
+    position: relative;
+}
+
+.importantInfo {
+    margin-top: 24px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    padding-top: 22px;
+}
+
+.importantInfo p {
+    font-size: 12px;
+    color: #333;
+    line-height: 100%;
+    margin-left: -4px;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+/*-----------------
+	17. Focus Label
+-----------------------*/
+
+.form-focus {
+	display: flex;
+	height: 50px;
+	position: relative;
+}
+.form-focus .control-label {
+	font-size: 16px;
+	font-weight: 400;
+	opacity: 0.4;
+	pointer-events: none;
+	position: absolute;
+	-webkit-transform: translate3d(0, 22px, 0) scale(1);
+	-ms-transform: translate3d(0, 22px, 0) scale(1);
+	-o-transform: translate3d(0, 22px, 0) scale(1);
+	transform: translate3d(0, 22px, 0) scale(1);
+	transform-origin: left top;
+	transition: 240ms;
+	left: 12px;
+	top: -8px;
+	z-index: 1;
+	color: #888;
+}
+.form-focus.focused .control-label {
+	opacity: 1;
+	font-weight: 300;
+	top: -14px;
+	font-size: 12px;
+	z-index: 1;
+}
+.form-focus .form-control {
+	height: 50px;
+	padding: 21px 12px 6px;
+}
+.form-focus .form-control::-webkit-input-placeholder {
+	color: transparent;
+	transition: 240ms;
+}
+.form-focus .form-control:focus::-webkit-input-placeholder {
+	transition: none;
+}
+.form-focus.focused .form-control::-webkit-input-placeholder {
+	color: #bbb;
+}
+.profile-basic .cal-icon {
+	width: 100%;
+}
+.form-focus .select2-container .select2-selection--single {
+	border: 1px solid #ccc;
+	height: 50px;
+	border-radius: 0;
+}
+.form-focus .select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 48px;
+	right: 7px;
+}
+.form-focus .select2-container--default .select2-selection--single .select2-selection__arrow b {
+	border-color: #ccc transparent transparent;
+	border-style: solid;
+	border-width: 6px 6px 0;
+	height: 0;
+	left: 50%;
+	margin-left: -10px;
+	margin-top: -2px;
+	position: absolute;
+	top: 50%;
+	width: 0;
+}
+.form-focus .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+	border-color: transparent transparent #ccc;
+	border-width: 0 6px 6px;
+}
+.form-focus .select2-container .select2-selection--single .select2-selection__rendered {
+	padding-right: 30px;
+	padding-left: 12px;
+	padding-top: 10px;
+}
+.form-focus .select2-container--default .select2-selection--single .select2-selection__rendered {
+	color: #676767;
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 38px;
+}
+.form-focus .select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background-color: #fc6075;
+}
+
+.text-right {
+float:right !important;
+}
+
+/*-----------------
+     Responsive
+-----------------------*/
+
+
+
+@media only screen and (max-width: 479px) {
+	.user-menu {
+		display: none;
+	}
+	
+	.page-title {
+		font-size: 18px;
+	}
+	
+	.account-box {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	
+}
+
+

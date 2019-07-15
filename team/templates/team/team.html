@@ -1,0 +1,261 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block navbar %}
+<div class="nab_list" id="navbarNav">
+    <ul class="">
+        <li class="scroll"><a href="{% url 'we-are-hiring' %}">We Are Hiring</a> </li>
+        <li class="scroll"><a href="{% url 'about' %}">About</a></li>
+        <li class="scroll active"><a href="{% url 'team' %}">Team</a></li>
+        <li class="scroll"><a href="{% url 'portfolio' %}">Portfolio </a> </li>
+        <li class="scroll"><a href="{% url 'partners' %}">Partners</a> </li>
+        <li class="scroll"><a href="{% url 'wallet'%}">Private Sale</a> </li>
+        <li class="scroll"><a href="{% url 'contact'%}">Contact</a> </li>
+    </ul>
+</div>
+{% endblock navbar %}
+
+{% block content %}
+<div class="container ">
+          <div class="cover_Text">
+              <div class="row">
+                  <h1>Active Members</h1>
+              </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Content -->
+      <div id="content"> 
+        <!-- Development -->
+        <section class="dev-activ text-center padding-top-100 padding-bottom-100" id="activity">
+          <div class="container">
+            <div class="row active-with-click">
+              <!-- Memeber-->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Cyan">
+                        <h2>
+                            <span>Srini Chakwal</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Founding Board Member
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="{% static 'images/pic_4.jpg' %}">
+                            </div>
+                            <div class="mc-description">
+                                Srini has more than 15 years of experience in Private Equity & Venture capital as well as extensive understanding of investing in and supporting businesses with high growth potential.
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <!--<h4>
+                                Social
+                            </h4>
+                            <a class="fab fa-facebook"></a>
+                            <a class="fab fa-twitter"></a>
+                            <a class="fab fa-linkedin"></a>
+                            <a class="fab fa-google-plus"></a>-->
+                        </div>
+                    </article>
+                </div>
+                <!-- Memeber-->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Cyan">
+                        <h2>
+                            <span>Nandhagopal G</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Co-founder
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="{% static 'images/gopal.jpeg' %}">
+                            </div>
+                            <div class="mc-description">
+                                Crowdnext Blockchain technology, while impacting finance industry the most, also has the potential to enable decentralized version of Venture Capital meant for the global digital community. Crowd Venture Capital is striving to make this a reality.
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <!--<h4>
+                                Social
+                            </h4>
+                            <a class="fab fa-facebook"></a>
+                            <a class="fab fa-twitter"></a>
+                            <a class="fab fa-linkedin"></a>
+                            <a class="fab fa-google-plus"></a>-->
+                        </div>
+                    </article>
+                </div>
+                <!-- Memeber-->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Cyan">
+                        <h2>
+                            <span>Craig Sultan</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                CEO
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="{% static 'images/pic_2.jpg' %}">
+                            </div>
+                            <div class="mc-description">
+                                Craig, the Investment Director at Redclays Capital, has over 25 years of experience in investment management, and banking in private equity as well as public market transaction.
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <!--<h4>
+                                Social
+                            </h4>
+                            <a class="fab fa-facebook"></a>
+                            <a class="fab fa-twitter"></a>
+                            <a class="fab fa-linkedin"></a>
+                            <a class="fab fa-google-plus"></a>-->
+                        </div>
+                    </article>
+                </div>
+                <!-- Memeber-->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Cyan">
+                        <h2>
+                            <span>Chris Ocansey</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Vice President
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="{% static 'images/pic_1.jpg' %}">
+                            </div>
+                            <div class="mc-description">
+                                Chris is an experienced professional with over 15 years in finance, providing insight and leadership on internal audit and compliance reviews.
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <!--<h4>
+                                Social
+                            </h4>
+                            <a class="fab fa-facebook"></a>
+                            <a class="fab fa-twitter"></a>
+                            <a class="fab fa-linkedin"></a>
+                            <a class="fab fa-google-plus"></a>-->
+                        </div>
+                    </article>
+                </div>
+                <!-- Memeber-->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Cyan">
+                        <h2>
+                            <span>Santosh Prasad</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                CTO
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="{% static 'images/pic_5.jpg' %}">
+                            </div>
+                            <div class="mc-description">
+                                Santosh has been a professional software developer for the last 15 years and a Blockchain Evangelist. In addition to being very passionate about Blockchain technology.
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <!--<h4>
+                                Social
+                            </h4>
+                            <a class="fab fa-facebook"></a>
+                            <a class="fab fa-twitter"></a>
+                            <a class="fab fa-linkedin"></a>
+                            <a class="fab fa-google-plus"></a>-->
+                        </div>
+                    </article>
+                </div>
+                <!-- Memeber-->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Cyan">
+                        <h2>
+                            <span>Vinay Angadi</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Chief Software Architect
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="{% static 'images/pic_6.jpg' %}">
+                            </div>
+                            <div class="mc-description">
+                                Vinay has been an entrepreneur/Software architect for the past 8 years. His areas of expertise include Digital marketing, Web and Mobile Technology.
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <!--<h4>
+                                Social
+                            </h4>
+                            <a class="fab fa-facebook"></a>
+                            <a class="fab fa-twitter"></a>
+                            <a class="fab fa-linkedin"></a>
+                            <a class="fab fa-google-plus"></a>-->
+                        </div>
+                    </article>
+                </div>
+                <!-- Memeber-->
+                <div class="col-md-4 col-sm-6 col-xs-12">
+                    <article class="material-card Cyan">
+                        <h2>
+                            <span>Maulin B. Thaker</span>
+                            <strong>
+                                <i class="fa fa-fw fa-star"></i>
+                                Chief Financial/Analytical
+                            </strong>
+                        </h2>
+                        <div class="mc-content">
+                            <div class="img-container">
+                                <img class="img-responsive" src="{% static 'images/pic_3.jpg' %}">
+                            </div>
+                            <div class="mc-description">
+                                Maulin B. Thaker has been a professional Financial/Analytical. Prior experience included managing end-to-end equity research support for a US Hardline Retail client
+                            </div>
+                        </div>
+                        <a class="mc-btn-action">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <div class="mc-footer">
+                            <!--<h4>
+                                Social
+                            </h4>
+                            <a class="fab fa-facebook"></a>
+                            <a class="fab fa-twitter"></a>
+                            <a class="fab fa-linkedin"></a>
+                            <a class="fab fa-google-plus"></a>-->
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        </section>
+{% endblock content %}

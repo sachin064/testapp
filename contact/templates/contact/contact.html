@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block navbar %}
+<div class="nab_list" id="navbarNav">
+    <ul class="">
+        <li class="scroll"><a href="{% url 'we-are-hiring' %}">We Are Hiring</a> </li>
+        <li class="scroll"><a href="{% url 'about' %}">About</a></li>
+        <li class="scroll"><a href="{% url 'team' %}">Team</a></li>
+        <li class="scroll"><a href="{% url 'portfolio' %}">Portfolio </a> </li>
+        <li class="scroll"><a href="{% url 'partners' %}">Partners</a> </li>
+        <li class="scroll"><a href="{% url 'wallet'%}">Private Sale</a> </li>
+        <li class="scroll active"><a href="{% url 'contact'%}">Contact</a> </li>
+    </ul>
+</div>
+{% endblock navbar %}
+
+{% block content %}
+<div class="container ">
+          <div class="cover_Text">
+              <div class="row">
+                  <h1>Contact us</h1>
+              </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Content -->
+      <div id="content"> 
+{% endblock content %}
+
+{% block bottom_footer %}
+	<div class="container">
+        <!-- Contact Us -->
+        <div class="contact"> 
+            <h6>Get In Touch With us</h6>
+            <!-- Success Msg -->
+            <div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
+           
+            <!-- FORM -->
+            <form role="form" id="contact_form" class="contact-form" method="post" onSubmit="return false">
+              <ul class="row nolist-style">
+                <li class="col-sm-4">
+                  <label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                  </label>
+                </li>
+                <li class="col-sm-4">
+                  <label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                  </label>
+                </li>
+                <li class="col-sm-4">
+                  <label>
+                    <input type="text" class="form-control" name="company" id="company" placeholder="Phone">
+                  </label>
+                </li>
+                <li class="col-sm-12">
+                  <label>
+                    <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
+                  </label>
+                </li>
+                <li class="col-sm-12 text-left">
+                  <button type="submit"  class="btn btn-inverse" value="submit" id="btn_submit" onClick="proceed();">SUBMIT</button>
+                </li>
+              </ul>
+            </form>
+        </div>
+    </div>
+{% endblock bottom_footer %}

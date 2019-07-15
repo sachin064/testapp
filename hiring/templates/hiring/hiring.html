@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block navbar %}
+<div class="nab_list" id="navbarNav">
+    <ul class="">
+        <li class="scroll active"><a href="{% url 'we-are-hiring' %}">We Are Hiring</a> </li>
+        <li class="scroll"><a href="{% url 'about' %}">About</a></li>
+        <li class="scroll"><a href="{% url 'team' %}">Team</a></li>
+        <li class="scroll"><a href="{% url 'portfolio' %}">Portfolio </a> </li>
+        <li class="scroll"><a href="{% url 'partners' %}">Partners</a> </li>
+        <li class="scroll"><a href="{% url 'wallet'%}">Private Sale</a> </li>
+        <li class="scroll"><a href="{% url 'contact'%}">Contact</a> </li>
+    </ul>
+</div>
+{% endblock navbar %}
+{% block content %}
+<div class="container ">
+        <div class="cover_Text">
+            <div class="row">
+                <h1>Join with us</h1>
+            </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Content -->
+    <div id="content"> 
+
+      <!-- Join our community -->
+      <section class="community-sec padding-top-100 padding-bottom-80">
+        <div class="container">
+          <!-- Contact Us -->
+          <div class="contact"> 
+            <div class="sm-intro text-center">
+              <h2>JOIN PR AND DIGITAL TEAM</h2>
+              <h6>Just fill the form below and find your opportunity to work with us</h6>
+              <div class="text-underline_center"></div>
+            </div>
+            <!-- Success Msg -->
+            <div id="contact_message" class="success-msg"> <i class="fa fa-paper-plane-o"></i>Thank You. Your Message has been Submitted</div>
+           
+            <!-- FORM -->
+            <form role="form" id="contact_form" class="contact-form" method="post" onSubmit="return false">
+              <ul class="row nolist-style">
+                <li class="col-sm-6">
+                  <label>
+                    <input type="text" class="form-control" name="post_applied" id="post" placeholder="Post To Applied">
+                  </label>
+                </li>
+                <li class="col-sm-6">
+                  <label>
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                  </label>
+                </li>
+                <li class="col-sm-6">
+                  <label>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                  </label>
+                </li>
+                <li class="col-sm-6">
+                  <label>
+                    <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone">
+                  </label>
+                </li>
+                <li class="col-sm-6">
+                  <label>
+                    <input type="text" class="form-control" name="City" id="City" placeholder="City">
+                  </label>
+                </li>
+                <li class="col-sm-6">
+                  <label>
+                    <input type="text" class="form-control" name="dob" id="dob" placeholder="Date of Birth">
+                  </label>
+                </li>
+                <li class="col-sm-12">
+                  <label>
+                    <input type="file" class="form-control" name="doc" id="doc" placeholder="Upload Document">
+                  </label>
+                </li>
+                <li class="col-sm-12 text-left">
+                  <button type="submit"  class="btn btn-inverse" value="submit" id="btn_submit" onClick="proceed();">SUBMIT</button>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <!-- Development -->
+      <section class="dev-activ text-center padding-top-100 padding-bottom-100" id="activity">
+        <div class="container" data-aos="fade-up"
+       data-aos-anchor-placement="center-bottom">
+          <div class="sm-intro">
+            <h2>We are hiring</h2>
+            <h6>Empowering individuals, investors, and developers to join our growing global network.</h6>
+            <div class="text-underline_center"></div>
+            <p>We at CrowdNext have been building Crowd Venture Capital powered by Blockchain Technology experiences for a very long time now. In that time we have gained a vast amount of experience and knowledge.</p>
+          </div>
+          <ul class="row margin-top-50 margin-bottom-50">
+            <li class="col"> <i class="fas fa-info-circle"></i><span><span class="counter">hr@crowdnext.com</span></span>
+              <p>For Career query drop a mail</p>
+            </li>
+            <li class="col"><i class="fas fa-search"></i><span><span class="counter">PR</span>  EXECUTIVE</span>
+              <p>Experience- 2 to 3 years</p>
+            </li>
+            <li class="col"><i class="fas fa-sign-in-alt"></i><span><span class="counter">DIGITAL ACCOUNT</span> EXECUTIVE</span>
+              <p>Experience- 2 to 3 years</p>
+            </li>
+          </ul>
+      </section>
+
+{% endblock content%}

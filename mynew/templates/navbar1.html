@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
+    <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"-->
+    <!--integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">-->
+    <link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.11/c3.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"/>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.6.11/c3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <!--extra font awesome-->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <style>
+        *, h1, h2, th, td, btn {
+	       font-family: 'Chakra Petch', sans-serif;
+	   }
+        body {
+            background-color: #DDDDDD;
+        }
+        .navbar {
+            border-radius: 0;
+        }
+        .navbar-default {
+            background-color: #0f2f2f2f;
+        }
+        .btn {
+            border-radius: 0;
+        }
+        .btn-primary {
+            background-color: #auto;
+
+        }
+        .toast {
+            opacity: 1 !important;
+        }
+        ::-webkit-scrollbar {
+          width: 10px;
+        }
+         ::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 5px grey;
+        }
+        ::-webkit-scrollbar-thumb {
+          background: grey;
+          border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+          background: black;
+        }
+
+
+
+
+
+
+
+    </style>
+    {% block style %}{% endblock %}
+</head>
+
+<body>
+{% block body %}
+</body>
+
+<script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip();
+        });
+
+
+
+
+</script>
+</html>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'home' %}" style="background-color:#b7bdbd">
+                <img src="{% static 'img/crowdnext.png' %}" style="margin-top: -14px;" alt="CrowdNext">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <div>
+                <div class="container-fluid" style="float:right;color:black">
+                    <div class="navbar-header">
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">Join Us</a></li>
+                        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"
+                                                style="height:50px" ;><span
+                                class="glyphicon glyphicon-user" style=" font-size: 2.5rem;padding-left:10%"></span></a>
+                            <ul class="dropdown-menu"
+                                style="margin-left: -119%;width: 189px;float: left;margin-left: -93px;height: 94px;">
+                                <!--<li><a href="#">sgdsjk</a></li>-->
+                                <li><a href="#" style="text-align:left;">Account</a></li>
+                                <li><a href="#" id="email" class="email" style="text-align:left"></a></li>
+                                <li><a href="{% url 'home' %}" style="text-align:left">logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+</div>
+
+</div>
+</div>
+</nav>
+{% endblock %}

@@ -1,0 +1,88 @@
+
+#nav-main {
+    box-shadow: 0 3px 5px rgba(16,15,15,0.16);
+    background:#fff;
+    position: relative;}
+
+.page{
+  padding: 10px;
+  border-bottom-width: 3px;
+  border-bottom-color: #01a9f4;
+  border-bottom-style: solid;
+  font-family: "Arial","Helvetica",sans-serif;
+  }
+  .head-img{
+  padding-left: 125px; 
+  }
+  .bg{
+    background: #f3f3ea ;
+    position: relative;
+    height: auto;
+    width: 100%;}
+.bg-ptl{
+  padding: 20px;
+  background: #f2f2f2;
+  min-height: auto;
+  box-shadow: 0 0 20px 5px rgba(37, 35, 207, 0.11);
+  /* border: #eaebeb 1px solid; */
+}
+
+.box{padding:15% 0;}
+.box a img {
+  padding-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.box p{ text-align: center;
+color:#aca5a5;
+font-size: 16px;}
+
+#alert{padding-top: 30px;text-align: center;}
+.btn-1 {
+  padding: 14px 20px;
+  color: #fff;
+  background-color: #3d4041;
+    /* border-radius: 4px; */
+  font-size: 17px;
+  border: 1px solid #f3f6f8;
+  margin: 15px 0px;
+}
+.pull-center{
+  text-align: center;
+}
+.msg p{ font-size:15px;
+       line-height:22px;
+       word-spacing: 1px;}
+
+.elink {
+  text-align: center;
+  padding:25px;
+}
+/*===========style for welcome page=========*/
+.bg-pt2{
+  padding: 10px;
+  background: #fff;
+
+  : auto;
+  box-shadow: 0 0 20px 5px rgba(37, 35, 207, 0.11);
+ }
+.box1{padding: 15% 0%;}
+.box1 p{
+  font-size: 14px;
+    color:#898484;
+    
+    /*padding: 10px;
+    
+    word-spacing: 1px;*/
+  }
+.btn-2
+{
+   padding: 16px 50px;
+  color: #fff;
+  background-color: #01a9f4;
+    /* border-radius: 4px; */
+  font-size: 14px;
+  border: 1px solid #f3f6f8;
+  margin: 15px 0px;
+}

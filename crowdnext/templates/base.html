@@ -1,0 +1,240 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Crowdnext-Fintech a Reinventing the world of digital currency in venture capital with blockchain technology">
+    <meta name="author" content="CrowdNext">
+    <title>Crowdnext-Fintech a Reinventing the world of digital currency in venture capital with blockchain technology</title>
+    {% load front_tags %}
+    {% load staticfiles %}
+    <link rel="shortcut icon" type="image/ico" href="{% static 'images/favicon.png' %}" />
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+    <link href="{% static 'fonts/flaticon.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'owlcarousel/assets/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'owlcarousel/assets/owl.theme.default.min.css' %}">
+    <!-- JavaScripts -->
+    <script src="{% static 'js/modernizr.js' %}"></script>
+
+
+    <!-- Online Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet">
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+
+  <!-- LOADER  -->
+  <!--<div id="loader-wrapper">-->
+    <!--<div class="loading"></div> -->
+    <!--<div class="loader-section"></div>-->
+  <!--</div>-->
+
+  <!-- Wrap -->
+  <div id="wrap"> 
+    
+    <section id="cover">
+      <input type="checkbox" id="check" />
+      <div  class="sticky" id="home">
+          <div class="container">
+              <div class="row">
+                      <div class="col-sm-6 col-xs-8">
+                          <a class="navbar-brand active" href="{% url 'home' %}"><img src="{% static 'images/pic_1.png' %}" width="" ></a>
+                      </div>
+                      <div class="col-sm-5 col-xs-4">
+                        <nav class="navbar navbar-expand-lg">
+                          <div class="container-fluid">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" data-hover="dropdown" data-animations="slideInUp fadeInLeft bounceIn fadeInRight">
+                               <ul class="nav navbar-nav ml-auto">
+                                  {% if user.is_authenticated %}
+                                      {% if user.is_staff %}
+                                      <a href="" class="btn"><i class="fa fa-money"></i><span class="nav-link-text"> DashBoard</span></a>
+                                      {% endif %}
+                                      <a class="nav-item nav-link btn btn-inverse" href="javascript:{document.getElementById('logout').submit()}" onclick=""><i class="fas fa-sign-in-alt" style="padding-right: 1rem"></i>Logout</a>
+                                      <form id="logout" method="POST" action="{% url 'logout' %}">
+                                        {% csrf_token %}
+                                        <input type="hidden" />
+                                      </form>
+                                  {% endif %}
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </nav>
+                      </div>
+                      <div class="col-sm-1 col-xs-4">
+                         <label id="icon" for="check"> 
+                              <!--  icon    -->
+                              <a href="javascript:void(0)" class="closebtn" onclick="openNav()">
+                                  <div id="test"  class="text-right">
+                                      <div class="bar1"></div>
+                                      <div class="bar2"></div>
+                                      <div class="bar3"></div>
+                                  </div>
+                              </a>
+                          </label>    
+                      </div>
+              </div>  
+          </div>  
+      </div>
+      <div id="mySidenav" class="sidenav">
+          <div class="row">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          </div>
+          <div class="container ">
+              <div class="row">
+                  <div class="col-sm-4 col-xs-12 order-sx-last ">
+                      <header >
+                          <div class="container"> 
+                              <!-- Logo -->
+                              {% block navbar %}{% endblock navbar %}
+                          </div>
+                          <div class="clearfix"></div>
+                      </header>
+                  </div>
+                  <div class="col-sm-8 order-sm-first col-xs-12 cover_Text_nav">
+                          <h1>
+                        {% front_edit "HEADING, Im root!" %}
+                        CROWD VENTURE CAPITAL WITH BLOCKCHAIN
+                        {% end_front_edit  %}
+                        </h1>
+                          {% front_edit "HEADING_SUB, Im root!" %}
+                          <h5>Take advantage of blockchain open and distributed ledger through crowdnext, crowd venture capital with blockchain protocol that enable access creation and distribution of financial assets</h5>
+                          {% end_front_edit  %}
+                            {% if user.is_authenticated %}
+                            <a href="#" class="btn" ><i class="fa fa-fw fa-user" style="padding-right: 1rem"></i>I,M {{ user.username }} <span class="caret"></span></a>
+                            <a href="" class="btn btn-inverse"><i class="fa fa-fw fa-envelope"></i><span class="nav-link-text"> {{ user.email }}</span></a>
+                            <a href="" class="btn btn-inverse"><i class="fa fa-money"></i><span class="nav-link-text"> Wallet</span></a>
+                              
+                            {% else %}
+                            <a href="{% url 'logine' %}" class="btn">Log In</a>
+                            <a href="{% url 'register' %}" class="btn btn-inverse">Register Now!</a>
+                            {% endif %}
+                  </div>  
+                              
+              </div>
+          </div>
+      </div>
+      
+    {% block content %}{% endblock content %}
+      <!-- Join our community -->
+      <section class="community-sec padding-top-100 padding-bottom-80">
+        <div class="container" >
+          {% block top_footer %}{% endblock top_footer %}
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col-sm-12"> 
+                  <div class="sm-intro">
+                    <h2>Social Connect</h2>
+                        <ul class="socials">
+                          <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"><a href="https://www.facebook.com/Crowdnext/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                          <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500" data-aos-delay="300"><a href="https://twitter.com/crowdnext" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                          <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000" data-aos-delay="600"><a href="https://www.linkedin.com/company/crowdnext/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                          <lI data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2500" data-aos-delay="900"><a href="https://crowdnextteam.slack.com/" target="_blank"><i class="fab fa-slack"></i></a></lI>
+                          <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="3000" data-aos-delay="1200"><a href="https://t.me/crowdnext" target="_blank"><i class="fas fa-paper-plane"></i></a></li>
+                          <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="3000" data-aos-delay="1200"><a href="https://www.youtube.com/channel/UCgfZ13ox0UGxxfqmMtM1vpg/featured?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a></li>
+                          <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="3000" data-aos-delay="1200"><a href="https://medium.com/@crowdnext" target="_blank"><i class="fab fa-medium-m"></i></a></li>
+                          <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="3000" data-aos-delay="1200"><a href="https://www.messenger.com/t/Crowdnext" target="_blank"><i class="fab fa-facebook-messenger"></i></a></li>
+                        </ul>
+                  </div>
+                </div>
+                <div class="col-sm-12">
+                  <div class="sm-intro">
+                    <h2>Sitemap</h2>
+                    <ul class="sitemap">
+                        <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000"><a href="{% url 'about' %}">About</a></li>
+                        <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500"> <a href="advisory.html">Advisory </a> </li>
+                        <li data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000"> <a href="{% url 'wallet'%}">Private Sale</a> </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="news-letter" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <h2>Subscribe</h2>
+                <h5>We are constantly improving our platform as we transition towards Crowd Venture Capital With Blockchian. Join our mailing list to stay up to date.</h5>
+                <form>
+                  <input type="email" placeholder="Enter your email address" required>
+                  <button type="submit">SEND</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Footer -->
+      <footer id="contact">
+        {% block bottom_footer %}{% endblock bottom_footer %}
+        <!-- Rights -->
+        <div class="rights">
+          <div class="container">
+            <div class="row">
+              <div class="col">
+                <p>© 2018 Crowdnext. All Rights Reserved.</p>
+              </div>
+              <div class="col text-right"> <a href="#.">Terms & Conditions </a> <a href="contact.html">Contact Us</a> </div>
+            </div>
+          </div>
+        </div>  
+      </footer>
+  </div>
+
+  <!-- Script -->
+  <script src="{% static 'js/jquery-1.11.3.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+  <script src="{% static 'js/jquery.sticky.js' %}"></script>
+  <script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'js/main.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="{% static 'owlcarousel/owl.carousel.min.js' %}"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script>
+              $(document).ready(function() {
+                var owl = $('.owl-carousel');
+                owl.owlCarousel({
+                  margin: 10,
+                  autoplay: true,
+                  loop: true,
+                  nav: true,
+                  navText: ["<img src='images/icon_5.png'>","<img src='images/icon_6.png'>"],
+                  responsive: {
+                    0: {
+                      items: 1
+                    },
+                    600: {
+                      items: 2
+                    },
+                    1000: {
+                      items: 3
+                    }
+                  }
+                })
+              })
+          </script>
+          <script src="//cdn.ckeditor.com/4.4.7/standard/ckeditor.js"></script>
+          {% front_edit_scripts editor="ckeditor" %}
+  
+  </body>
+  </html>

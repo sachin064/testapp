@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block navbar %}
+<div class="nab_list" id="navbarNav">
+    <ul class="">
+        <li class="scroll"><a href="{% url 'we-are-hiring' %}">We Are Hiring</a> </li>
+        <li class="scroll"><a href="{% url 'about' %}">About</a></li>
+        <li class="scroll"><a href="{% url 'team' %}">Team</a></li>
+        <li class="scroll"><a href="{% url 'portfolio' %}">Portfolio </a> </li>
+        <li class="scroll active"><a href="{% url 'partners' %}">Partners</a> </li>
+        <li class="scroll"><a href="{% url 'wallet'%}">Private Sale</a> </li>
+        <li class="scroll"><a href="{% url 'contact'%}">Contact</a> </li>
+    </ul>
+</div>
+{% endblock navbar %}
+
+{% block content %}
+<div class="container ">
+        <div class="cover_Text">
+            <div class="row">
+                <h1>Partners</h1>
+            </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Content -->
+    <div id="content"> 
+      <section class="album py-5 bg-light padding-top-100 padding-bottom-80">
+          <div class="container">
+
+              <div class="row">
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm text-center" style="padding: 0 10px 0 10px">
+                      <img class="card-img-top" src="{% static 'images/Redclays.jpg' %}" alt="Card image cap" width="300" height="90">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm text-center">
+                      <img class="card-img-top" src="{% static 'images/pic_4.png' %}" alt="Card image cap" width="300" height="90">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm text-center">
+                      <img class="card-img-top" src="{% static 'images/pic_5.png' %}" alt="Card image cap" width="300" height="90">
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card mb-4 shadow-sm text-center">
+                      <img class="card-img-top" src="{% static 'images/pic_27.png' %}" alt="Card image cap" width="300" height="90">
+                    </div>
+                </div>
+              </div>
+          </div>
+        </section>
+{% endblock content %}

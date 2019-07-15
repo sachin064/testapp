@@ -1,0 +1,228 @@
+{% include 'base1.html' %}
+{% block body %}
+{% include 'navbar1.html' %}
+{% load staticfiles %}
+
+<style>
+    tbody {
+        background-color: white;
+    }
+    td {
+        font-weight: bold;
+    }
+
+    .btn-box {
+    text-align:center;
+    padding-top:120px;
+    }
+
+    .btn btn-primary{
+     border-radius: 14px;
+        }
+
+    .btn-3 {
+    margin:11px auto;
+    padding:13px 51px;
+    border-radius: 14px;
+    }
+
+    .main-box {
+    padding:15px;
+    border:2px solid #ccc;
+    }
+
+    .u {
+    font-size:75px;
+    }
+
+    .footer {
+    padding:30px 0px;
+    background-color:#000;
+    margin-top:100px;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    }
+
+    .footer-social {
+    margin:0;
+    padding:o;
+    list-style-type:none;
+    text-align:right;
+    }
+
+    .footer-social li {
+    display:inline-block;
+    }
+
+    .footer-social li a {
+    display:block;
+    padding:10px;
+    }
+
+    @media screen and (max-width:640px) {
+    .footer {
+    padding:15px 0px;
+    }
+
+    .footer-social {
+    text-align:center;
+    }
+
+    .footer {
+    padding:10px 0px;
+    background-color:#000;
+    margin-top:0px;
+    position:static;
+    bottom:0;
+    width:100%;
+    }
+
+
+    }
+
+</style>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-xs-12">
+            <div class="main-box" style="margin-top:8%">
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                     aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" action="{% url 'resetpassword' %}">
+                                    <div class="form-group form-focus">
+                                        <label class="control-label"><i class="fa fa-password" aria-hidden="true"></i>old
+                                            password</label>
+                                        <input class="form-control floating" name="password" type="password">
+                                    </div>
+                                    <div class="form-group form-focus">
+                                        <label class="control-label"><i class="fa fa-password" aria-hidden="true"></i>new
+                                            formpassword</label>
+                                        <input class="form-control floating" name="password1" type="password">
+                                    </div>
+                                    <div class="form-group form-focus">
+                                        <label class="control-label"><i class="fa fa-password" aria-hidden="true"></i>confirm
+                                            password</label>
+                                        <input class="form-control floating" name="password2" type="password">
+                                    </div>
+                                    <div class="form-group text-center">
+                                        <button class="btn btn-primary account-btn" type="submit">Submit
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="user_data" class="container">
+
+                    <div class="row">
+                        <div class="col-md-1 col-sm-1 col-xs-12"><i class="fa fa-user u"></i></div>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+            <h style="font-size:25px">
+                        <!--<p class="font-12" id="txtemail"><b style="color:black">Email</b>:Email</p>-->
+                <div id="txtemail" class="email"></div>
+            </h>
+                         <div id="ipuser" class="ip"><p>ip:</p></div>
+                            <div id="hostname" class="host_name"></div>
+                            <div id="last_login" class="last_login"></div>
+                        </div>
+                        <a href="{% url 'wallet' %}">
+                            <button type="button" class="btn btn-primary btn-3" style="margin-left:190px;">wallet
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-xs-6">
+                    <div class="main-box" style="margin-top:10px">
+                        <label class="control-label"><i class="fa fa-unlock-alt" style="font-size:200%"
+                                                        aria-hidden="true"></i>Login password</label>
+                        <button style="float:right" type="button" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModal">Change
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer starts here-->
+
+
+<section class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">&nbsp;</div>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+                <ul class="footer-social" style="margin-left: -115%;">
+                    <li><a href="https://www.facebook.com/Crowdnext/"><i class="fa fa-facebook"></i> </a></li>
+                    <li><a href="https://twitter.com/crowdnext"><i class="fa fa-twitter"></i> </a></li>
+                    <li><a href="https://www.linkedin.com/company/crowdnext/"><i class="fa fa-linkedin"></i> </a></li>
+                    <li><a href="https://crowdnextteam.slack.com/"><i class="fa  fa-slack"></i> </a></li>
+                    <li><a href="https://t.me/crowdnext"><i class="fas fa-paper-plane"></i> </a></li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCgfZ13ox0UGxxfqmMtM1vpg/featured?view_as=subscriber"><i
+                                class="fa fa-youtube"></i> </a></li>
+                    <li><a href="https://medium.com/@crowdnext"><i class="fab fa-medium-m"></i> </a></li>
+                    <li><a href="https://www.messenger.com/t/Crowdnext"><i class="fab fa-facebook-messenger"></i> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script>
+
+    var id = {{id}}
+
+    function getData(url, callback){
+        $.get(url, function(data, status){
+            callback(status, data);
+        });
+    }
+
+    function postData(url, data, callback) {
+        data['csrfmiddlewaretoken'] = '{{csrf_token}}';
+        $.post(url, data, function(data, status){
+            callback(status, data);
+        });
+    }
+
+    function getUserData() {
+        var url = '/user-data/'+id;
+        getData(url, function(status, data){
+            console.log(status,data)
+              $('#txtemail').text(data.data.email);
+              $('#ipuser').text(data.data.ip);
+              $('#hostname').text(data.data.host_name);
+              $('#last_login').text(data.data.last_login);
+              $('#email').text(data.data.email);
+
+        })
+    }
+    getUserData()
+
+
+
+
+
+
+
+
+
+</script>
+{% endblock %}
+

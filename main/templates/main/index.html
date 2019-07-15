@@ -1,0 +1,338 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load front_tags %}
+{% block navbar %}
+<div class="nab_list" id="navbarNav">
+    <ul class="">
+        <li class="scroll"><a href="{% url 'we-are-hiring' %}">We Are Hiring</a> </li>
+        <li class="scroll"><a href="{% url 'about' %}">About</a></li>
+        <li class="scroll"><a href="{% url 'team' %}">Team</a></li>
+        <li class="scroll"><a href="{% url 'portfolio' %}">Portfolio </a> </li>
+        <li class="scroll"><a href="{% url 'partners' %}">Partners</a> </li>
+        <li class="scroll"><a href="{% url 'wallet'%}">Private Sale</a> </li>
+        <li class="scroll"><a href="{% url 'contact'%}">Contact</a> </li>
+    </ul>
+</div>
+{% endblock navbar %}
+
+{% block content %}
+<div class="container ">
+      <div class="cover_Text">
+          <div class="row">
+              <div class="col-sm-8">
+                        <h1>
+                        {% front_edit "HEADING, Im root!" %}
+                        CROWD VENTURE CAPITAL WITH BLOCKCHAIN
+                        {% end_front_edit  %}
+                        </h1>
+                          {% front_edit "HEADING_SUB, Im root!" %}
+                          <h5>Take advantage of blockchain open and distributed ledger through crowdnext, crowd venture capital with blockchain protocol that enable access creation and distribution of financial assets</h5>
+                          {% end_front_edit  %}
+                          {% if user.is_authenticated %}
+                          <a href="#" class="btn" ><i class="fa fa-fw fa-user" style="padding-right: 1rem"></i>I,M {{ user.username }} <span class="caret"></span></a>
+                          <a href="" class="btn btn-inverse"><i class="fa fa-fw fa-envelope"></i><span class="nav-link-text"> {{ user.email }}</span></a>
+                          <a href="{% url 'wallet' %}" class="btn btn-inverse"><i class="fa fa-money"></i><span class="nav-link-text"> Wallet</span></a>
+                          {% else %}
+                          <a href="{% url 'logine' %}" class="btn">Log In</a>
+                          <a href="{% url 'register' %}" class="btn btn-inverse">Register Now!</a>
+                          {% endif %}
+              </div>  
+              <div class="col-sm-4">
+                  <div class="container">
+                                    
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <!-- Content -->
+  <div id="content"> 
+    <!-- Why Choose Us -->
+    <section class="why-choose padding-top-100 padding-bottom-100" id="about" >
+      <div class="container" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom"> 
+        
+        <!-- Why Choose Us  ROW-->
+        <div class="row">
+          <div class="col-md-7 margin-top-60"> 
+            
+            <!-- Tittle -->
+            <div class="heading margin-bottom-20">
+              <!--<h6 class="margin-bottom-10">The world’s only enterprise blockchain solution for global payments</h6>-->
+              {% front_edit "ABOUT_HEADING, Im root!" %}
+              <h4>CROWD VENTURE CAPITAL WITH BLOCKCHAIN</h4>
+              {% end_front_edit  %}
+            </div>
+            {% front_edit "ABOUT_PARAGRAPH, Im root!" %}
+            <p>Crowdnext is a Next Generation Crowd Venture Capital powered by Blockchain Technology. Crowdnext vision is to develop Blockchain technologies to disrupt the venture capital Sector with the first of its kind of liquid and comprehensive VC fund, The mission of the company is set on the new age of digital currency. Crowdnext has made Venture Capital accessible to any investor, unlike traditional Venture Capital is restricted accredited investors..</p>
+            <p>Blockchain is experiencing an exponential growth stage. It currently meet at a division position, at a key stage between Innovation and Early Adoption. The sector consequently presents unique opportunities for forward-thinking investors. Crowdnext combines the best of Finance & Technologies.</p>
+            {% end_front_edit  %}
+            <!--<div class="ultra-ser"> <span><span class="name"> Webicode &nbsp; - &nbsp;</span> <span>Ceo/Founder Chain</span></span> </div>
+            <a class="vid-btn margin-top-30 popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas"><i class="fas fa-play-circle"></i> Watch Video <br>
+            <span>How it work</span></a>--> </div>
+          
+          <!-- Image -->
+          <div class="col-md-5 text-right">  
+          {% front_edit "ABOUT_IMAGE, Im root!" %}
+            <img src="{% static 'images/chain-img (1).png' %}" alt="Why Choose Us Image">
+          {% end_front_edit  %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose_sub padding-top-100 padding-bottom-100" id="token">
+      <div class="container"> 
+        <!-- Services ROW -->
+        <div class="row"> 
+        
+          
+          <!-- Services -->
+          <div class="col-md-6 col-sm-6 col-xs-6" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <div class="ib-icon">
+            {% front_edit "ABOUT_ICON_1, Im root!" %} 
+              <img src="{% static 'images/icon_1.png' %}">
+              {% end_front_edit  %} </div>
+            <div class="ib-info">
+              {% front_edit "ABOUT_ICON_1_Heading, Im root!" %}
+              <h4 class="h6">24/7 ACCESS AND LIQUIDITY</h4>
+              {% end_front_edit  %}
+              {% front_edit "ABOUT_ICON_1_Caption, Im root!" %}
+              <p>Manage your digital assets 24/7. Fast withdrawals and no contract lock-ins. A growing list of supported value tokens with deep liquidity.</p>
+              {% end_front_edit  %}
+            </div>
+          </div>
+          
+          <!-- Services -->
+          <div class="col-md-6 col-sm-6 col-xs-6" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <div class="ib-icon"> 
+              {% front_edit "ABOUT_ICON_2, Im root!" %}
+              <img src="{% static 'images/icon_2.png' %}">
+              {% end_front_edit  %} </div>
+            <div class="ib-info">
+              {% front_edit "ABOUT_ICON_2_Heading, Im root!" %}
+              <h4 class="h6">CUTTING EDGE SECURITY</h4>
+              {% end_front_edit  %}
+              {% front_edit "ABOUT_ICON_2_Caption, Im root!" %}
+              <p>Digital assets require extra layers of security. The majority of assets are permanently stored in multi-sig protected cold wallets, so you can enjoy the safety of physical bank vaults.</p>
+              {% end_front_edit  %}
+            </div>
+          </div>
+          
+          <!-- Services -->
+          <div class="col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2500">
+            <div class="ib-icon"> 
+              {% front_edit "ABOUT_ICON_3, Im root!" %}
+              <img src="{% static 'images/icon_3.png' %}">
+              {% end_front_edit  %} </div>
+            <div class="ib-info">
+              {% front_edit "ABOUT_ICON_3_Heading, Im root!" %}
+              <h4 class="h6">INVEST WITH SPECIALISTS</h4>
+              {% end_front_edit  %}
+              {% front_edit "ABOUT_ICON_3_Caption, Im root!" %}
+              <p>The mission of the company is set on the new age of digital currency. Crowdnext has made Venture Capital accessible to any investor, unlike traditional Venture Capital is restricted accredited investors.</p>
+              {% end_front_edit  %}
+            </div>
+          </div>
+          
+          <!-- Services -->
+          <div class="col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2500">
+            <div class="ib-icon"> 
+              {% front_edit "ABOUT_ICON_4, Im root!" %}
+              <img src="{% static 'images/icon_4.png' %}">
+              {% end_front_edit  %} </div>
+            <div class="ib-info">
+              {% front_edit "ABOUT_ICON_4_Heading, Im root!" %}
+              <h4 class="h6">100% TRANSPARENCY</h4>
+              {% end_front_edit  %}
+              {% front_edit "ABOUT_ICON_4_Caption, Im root!" %}
+              <p>All exchanges are executed on the markets. No small print or hidden costs.</p>
+              {% end_front_edit  %}
+            </div>
+          </div>
+                    
+        </div>
+      </div>
+    </section>
+    <section class="album py-5 bg-light padding-top-100 padding-bottom-80">
+          <div class="container">
+            <div class="sm-intro">
+              <h2>Angel Portfolio</h2>
+            </div>
+              <div class="row">
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_20.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_21.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_22.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_23.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_24.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_25.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+                <div class="col-md-3">
+                    <a href=""><div class="card mb-4 shadow-sm text-center" style="background-color: #00395d;padding: 10px;">
+                      <img class="card-img-top" src="{% static 'images/pic_26.png' %}" alt="Card image cap" width="250" height="90">
+                    </div></a>
+                </div>
+              </div>
+          </div>
+        </section>
+
+         <section id="portfolio" class="community-sec padding-top-100 padding-bottom-80 ">
+              <div class="container" >
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="sm-intro">
+                       <h2>News</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
+                  <div class="owl-carousel owl-theme text-center" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_6.png' %}">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Using smart contracts, Crowdnext wants to offer the opportunity to replace the traditional Venture Capital systems with a powerful one using the Blockchain technology.</p>
+                                <a href="https://www.money-finance.net/crowdnext-a-crowd-venture-capital-with-blockchain-bringing-first-of-its-kind-of-liquid-vc-fund/">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_7.png' %}">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Crowdnext is next Generation Crowd Venture Funding on Ethereum Network. Using smart contracts, Crowdnext wants to offer the opportunity to replace the traditional Venture.</p><a href="">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_8.png' %}" style="padding-top: 40px">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Crowdnext is said to be the latest crowd venture funding program launch, something this crowd has been waiting for. It wants to use blockchain technology to replace the conventional Venture Capital systems with a more outsourced one.</p><a href="https://marketersmedia.com/crowdnext-crowd-venture-capital-with-blockchain/273095">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_18.png' %}">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Using smart contracts, Crowdnext wants to offer the opportunity to replace the traditional Venture Capital systems with a powerful one using the Blockchain technology.</p><a href="https://www.money-finance.net/crowdnext-a-crowd-venture-capital-with-blockchain-bringing-first-of-its-kind-of-liquid-vc-fund/">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="item">
+                          <div class="row">
+                              <div class="images_box">
+                                <img src="{% static 'images/pic_19.png' %}">
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="text_box">
+                                <p>Crowdnext is next Generation Crowd Venture Funding on Ethereum Network. Using smart contracts, Crowdnext wants to offer the opportunity to replace the traditional Venture Capital systems with a powerful one using the Blockchain technology.</p><a href="https://article.wn.com/view/2017/11/27/Crowdnext_Crowd_Venture_Capital_with_Blockchain/">Read More</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </section>
+       
+    <!-- Development -->
+    <section class="dev-activ text-center padding-top-100 padding-bottom-100" id="activity">
+      <div class="container" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom">
+        <div class="sm-intro">
+          {% front_edit "Caption_heading, Im root!" %}
+          <h2>Development Activity</h2>
+          {% end_front_edit  %}
+          {% front_edit "Caption_Paragraph, Im root!" %}
+          <p>We at CrowdNext have been building Crowd Venture Capital powered by Blockchain Technology experiences for a very long time now. In that time we have gained a vast amount of experience and knowledge.</p>
+          {% end_front_edit  %}
+        </div>
+        <!--<ul class="row margin-top-50 margin-bottom-50">
+          <li class="col"> <i class="flaticon-rotate"></i> <span><span class="counter">4</span> hrs Ago</span>
+            <p>Last Update</p>
+          </li>
+          <li class="col"><i class="flaticon-building"></i> <span><span class="counter">10</span> Days Ago</span>
+            <p>Last Block Found</p>
+          </li>
+          <li class="col"><i class="flaticon-money-1"></i> <span><span class="counter">45057</span>+</span>
+            <p>Contributions</p>
+          </li>
+          <li class="col"><i class="flaticon-team"></i> <span  class="counter">80</span>
+            <p>Team Members</p>
+          </li>
+        </ul>-->
+    </section>
+{% endblock content %}
+
+{% block top_footer %}
+<div class="album py-5">
+                <div class="container">
+
+                    <div class="row">
+                      <h2>Partners</h2>
+                      <div class="col-md-3">
+                          <div class="card mb-4 shadow-sm text-center" style="padding: 0 10px 0 10px">
+                            <img class="card-img-top" src="{% static 'images/Redclays.jpg' %}" alt="Card image cap" width="300" height="90">
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card mb-4 shadow-sm text-center">
+                            <img class="card-img-top" src="{% static 'images/pic_4.png' %}" alt="Card image cap" width="300" height="90">
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card mb-4 shadow-sm text-center">
+                            <img class="card-img-top" src="{% static 'images/pic_5.png' %}" alt="Card image cap" width="300" height="90">
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card mb-4 shadow-sm text-center">
+                            <img class="card-img-top" src="{% static 'images/pic_27.png' %}" alt="Card image cap" width="300" height="90">
+                          </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+{% endblock top_footer %}

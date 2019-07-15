@@ -1,0 +1,609 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load front_tags %}
+
+{% block navbar %}
+<div class="nab_list" id="navbarNav">
+    <ul class="">
+        <li class="scroll"><a href="{% url 'we-are-hiring' %}">We Are Hiring</a> </li>
+        <li class="scroll active"><a href="{% url 'about' %}">About</a></li>
+        <li class="scroll"><a href="{% url 'team' %}">Team</a></li>
+        <li class="scroll"><a href="{% url 'portfolio' %}">Portfolio </a> </li>
+        <li class="scroll"><a href="{% url 'partners' %}">Partners</a> </li>
+        <li class="scroll"><a href="{% url 'wallet'%}">Private Sale</a> </li>
+        <li class="scroll"><a href="{% url 'contact'%}">Contact</a> </li>
+    </ul>
+</div>
+{% endblock navbar %}
+{% block content %}
+      <div class="container ">
+          <div class="cover_Text">
+              <div class="row">
+                  <h1>about us</h1>
+              </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Content -->
+      <div id="content"> 
+        
+        <!-- Why Choose Us -->
+        <section class="why-choose padding-top-100 padding-bottom-100" id="about" >
+      <div class="container" data-aos="fade-up"
+     data-aos-anchor-placement="center-bottom"> 
+        
+        <!-- Why Choose Us  ROW-->
+        <div class="row">
+          <div class="col-md-7 margin-top-60"> 
+            
+            <!-- Tittle -->
+            <div class="heading margin-bottom-20">
+              <!--<h6 class="margin-bottom-10">The world’s only enterprise blockchain solution for global payments</h6>-->
+              {% front_edit "ABOUT_HEADING, Im root!" %}
+              <h4>CROWD VENTURE CAPITAL WITH BLOCKCHAIN</h4>
+              {% end_front_edit  %}
+            </div>
+            {% front_edit "ABOUT_PARAGRAPH, Im root!" %}
+            <p>Crowdnext is a Next Generation Crowd Venture Capital powered by Blockchain Technology. Crowdnext vision is to develop Blockchain technologies to disrupt the venture capital Sector with the first of its kind of liquid and comprehensive VC fund, The mission of the company is set on the new age of digital currency. Crowdnext has made Venture Capital accessible to any investor, unlike traditional Venture Capital is restricted accredited investors..</p>
+            <p>Blockchain is experiencing an exponential growth stage. It currently meet at a division position, at a key stage between Innovation and Early Adoption. The sector consequently presents unique opportunities for forward-thinking investors. Crowdnext combines the best of Finance & Technologies.</p>
+            {% end_front_edit  %}
+            <!--<div class="ultra-ser"> <span><span class="name"> Webicode &nbsp; - &nbsp;</span> <span>Ceo/Founder Chain</span></span> </div>
+            <a class="vid-btn margin-top-30 popup-youtube" href="https://www.youtube.com/watch?v=7e90gBu4pas"><i class="fas fa-play-circle"></i> Watch Video <br>
+            <span>How it work</span></a>--> </div>
+          
+          <!-- Image -->
+          <div class="col-md-5 text-right">  
+          {% front_edit "ABOUT_IMAGE, Im root!" %}
+            <img src="{% static 'images/chain-img (1).png' %}" alt="Why Choose Us Image">
+          {% end_front_edit  %}
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="why-choose_sub padding-top-100 padding-bottom-100" id="token">
+      <div class="container"> 
+        <!-- Services ROW -->
+        <div class="row"> 
+        
+          
+          <!-- Services -->
+          <div class="col-md-6 col-sm-6 col-xs-6" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <div class="ib-icon">
+            {% front_edit "ABOUT_ICON_1, Im root!" %} 
+              <img src="{% static 'images/icon_1.png' %}">
+              {% end_front_edit  %} </div>
+            <div class="ib-info">
+              {% front_edit "ABOUT_ICON_1_Heading, Im root!" %}
+              <h4 class="h6">24/7 ACCESS AND LIQUIDITY</h4>
+              {% end_front_edit  %}
+              {% front_edit "ABOUT_ICON_1_Caption, Im root!" %}
+              <p>Manage your digital assets 24/7. Fast withdrawals and no contract lock-ins. A growing list of supported value tokens with deep liquidity.</p>
+              {% end_front_edit  %}
+            </div>
+          </div>
+          
+          <!-- Services -->
+          <div class="col-md-6 col-sm-6 col-xs-6" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+            <div class="ib-icon"> 
+              {% front_edit "ABOUT_ICON_2, Im root!" %}
+              <img src="{% static 'images/icon_2.png' %}">
+              {% end_front_edit  %} </div>
+            <div class="ib-info">
+              {% front_edit "ABOUT_ICON_2_Heading, Im root!" %}
+              <h4 class="h6">CUTTING EDGE SECURITY</h4>
+              {% end_front_edit  %}
+              {% front_edit "ABOUT_ICON_2_Caption, Im root!" %}
+              <p>Digital assets require extra layers of security. The majority of assets are permanently stored in multi-sig protected cold wallets, so you can enjoy the safety of physical bank vaults.</p>
+              {% end_front_edit  %}
+            </div>
+          </div>
+          
+          <!-- Services -->
+          <div class="col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2500">
+            <div class="ib-icon"> 
+              {% front_edit "ABOUT_ICON_3, Im root!" %}
+              <img src="{% static 'images/icon_3.png' %}">
+              {% end_front_edit  %} </div>
+            <div class="ib-info">
+              {% front_edit "ABOUT_ICON_3_Heading, Im root!" %}
+              <h4 class="h6">INVEST WITH SPECIALISTS</h4>
+              {% end_front_edit  %}
+              {% front_edit "ABOUT_ICON_3_Caption, Im root!" %}
+              <p>The mission of the company is set on the new age of digital currency. Crowdnext has made Venture Capital accessible to any investor, unlike traditional Venture Capital is restricted accredited investors.</p>
+              {% end_front_edit  %}
+            </div>
+          </div>
+          
+          <!-- Services -->
+          <div class="col-md-6 col-sm-6 col-xs-6" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2500">
+            <div class="ib-icon"> 
+              {% front_edit "ABOUT_ICON_4, Im root!" %}
+              <img src="{% static 'images/icon_4.png' %}">
+              {% end_front_edit  %} </div>
+            <div class="ib-info">
+              {% front_edit "ABOUT_ICON_4_Heading, Im root!" %}
+              <h4 class="h6">100% TRANSPARENCY</h4>
+              {% end_front_edit  %}
+              {% front_edit "ABOUT_ICON_4_Caption, Im root!" %}
+              <p>All exchanges are executed on the markets. No small print or hidden costs.</p>
+              {% end_front_edit  %}
+            </div>
+          </div>
+                    
+        </div>
+      </div>
+    </section>
+         <!-- ABOUT
+        <section class="about light-bg"> 
+          <div class="main-page-section half_left_layout">
+            <div class="main-half-layout half_right_layout"> </div>
+            
+            <div class="main-half-layout-container half_right_layout">
+              <div class="about-us-con">
+                <h3>Growing Global Network</h3>
+                
+            </div>
+          </div>
+        </section>-->
+
+        
+        
+        <!-- Team Members -->
+        <section class="light-bg padding-top-100 padding-bottom-150" id="team">
+          <div class="container">
+            <div class="heading text-center">
+              {% front_edit "FAQ_HEADING, Im root!" %}
+              <h2>Frequently asked questions</h2>
+              {% end_front_edit  %}
+              {% front_edit "FAQ_PARAGRAPH, Im root!" %}
+              <p>Our team works diligently to include all the possible frequently asked questions regarding our products and services for better customer support. This page will answer many of queries that were asked along the way.</p>
+              {% end_front_edit  %}
+            </div>
+            <!-- FAQS -->
+            <div class="row">
+              <div class="col-md-12"> 
+                
+                <!-- According Style 1 -->
+                <!-- According Style 1 -->
+                <div class="panel-group accordion" id="accordion"> 
+                  
+                  <!-- According 1 -->  
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed">What is the Crowdnext all about?</a> </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                      <div class="panel-body">Crowdnext is a Next Generation Crowd Venture Capital powered by Blockchain Technology. Crowdnext vision is to develop Blockchain technologies to disrupt the venture capital Sector with the first of its kind of liquid and comprehensive VC fund, The mission of the company is set on the new age of digital currency.   Crowdnext has made Venture Capital accessible to any investor; unlike traditional Venture Capital are restricted accredited investors.</div>
+                    </div>
+                  </div>
+                  
+                  <!-- According 2 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" class="collapsed">What is a Blockchain and What purpose does the blockchain have in Crowdnext?</a> </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                      <div class="panel-body">Blockchain is a decentralised public ledger, which is primarily used for recording the transactions across global network, which cannot be altered without the consent of entire network. <br>
+                      As a venture capital firm, Crowdnext uses Blockchain technology to raise funds to fill the gap in the current tech market industry that exists where many companies find themselves to be too large for seed or angel investors, but not quite ready to pursue a series.</div>
+                    </div>
+                  </div>
+                  
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed"> How blockchain impacts the VC industry?</a> </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">Blockchain is transforming almost every sector in the world, so is the venture capital industry. Since beginning VC industry has remained unchanged but now blockchain technology ensures more liquid fund generation by use of cryptocurrency based trading.</div>
+                    </div>
+                  </div>
+
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed"> How will data get into the blockchain?</a> </h4>
+                    </div>
+                    <div id="collapseThree" class="panel-collapse collapse">
+                      <div class="panel-body">Blockchain stores data as transaction; Each transaction is record into public ledger and cannot be altered without public consent.</div>
+                    </div>
+                  </div>    
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#4" class="collapsed"> What is a smart contract?</a> </h4>
+                    </div>
+                    <div id="4" class="panel-collapse collapse">
+                      <div class="panel-body">Smart contract is a contract between two parties which is self executable. As per the terms defined between two parties it stores the amount (money) as per the agreement and as soon as agreement gets completed it automatically release the funds to recipient.</div>
+                    </div>
+                  </div>  
+                   <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#5" class="collapsed"> What is ERC20?</a> </h4>
+                    </div>
+                    <div id="5" class="panel-collapse collapse">
+                      <div class="panel-body">ERC stands for Ethereum Request for Comment and 20 is the allocated number for that request.  This is actually a set of rules to perform certain actions, specifically ERC20 based tokens can be used within the ethereum platform only. </div>
+                    </div>
+                  </div>   
+                      <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#6" class="collapsed"> What does the Token Do?</a> </h4>
+                    </div>
+                    <div id="6" class="panel-collapse collapse">
+                      <div class="panel-body">Tokenization is the process of converting assets into tokens. Token is basically used to get access of the offered services as per their defined value.</div>
+                    </div>
+                  </div> 
+                       <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#7" class="collapsed"> What is an ICO?</a> </h4>
+                    </div>
+                    <div id="7" class="panel-collapse collapse">
+                      <div class="panel-body">ICO is the short form of a term “Initial Coin Offering”. It is fundamentally a tool, which helps start-ups/businesses to offer investors and user some units of a new cryptocurrency or crypto-token in exchange to fiat currency or other popular cryptocurrencies</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#8" class="collapsed"> Is there a market for the project and what problem does it solve?</a> </h4>
+                    </div>
+                    <div id="8" class="panel-collapse collapse">
+                      <div class="panel-body">The entire venture capital industry is under transformation. The world economy has witnessed a great hype lead by blockchain technology. <br>
+                      Crowdnext is a venture capital firm that is offering investment options that have never been accessible before Blockchain. The firm has identified that there is a gap in the current tech market industry in which startups can find seed money, but are not ready to pursue a series a funding round or an ICO.</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#9" class="collapsed"> In which stage of development the project is and the future roadmap?</a> </h4>
+                    </div>
+                    <div id="9" class="panel-collapse collapse">
+                      <div class="panel-body">Under development of Alpha Version of Crowdnext</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#10" class="collapsed"> Where is your company based?</a> </h4>
+                    </div>
+                    <div id="10" class="panel-collapse collapse">
+                      <div class="panel-body">United States and Switzerland</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#11" class="collapsed">Where can I find more information on the team?</a> </h4>
+                    </div>
+                    <div id="11" class="panel-collapse collapse">
+                      <div class="panel-body">You can find more information about team, on our website i.e. <br>https://Crowdnext.com  and whitepaper <br>https://Crowdnext.com/images/ICO%20Whitepaper.pdf</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#12" class="collapsed">Who are your partners?</a> </h4>
+                    </div>
+                    <div id="12" class="panel-collapse collapse">
+                      <div class="panel-body">Redclays Capital, Deloitte and Moaurant Ozannes</div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#13" class="collapsed">Is Crowdnext a non profit?</a> </h4>
+                    </div>
+                    <div id="13" class="panel-collapse collapse">
+                      <div class="panel-body">No</div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#14" class="collapsed">Do you have a prototype?</a> </h4>
+                    </div>
+                    <div id="14" class="panel-collapse collapse">
+                      <div class="panel-body">Since we are at a very beginning stage of the project, its prototype is not yet ready</div>
+                    </div>
+                  </div>  
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#15" class="collapsed">What is the latest news from Team and Press Coverage?</a> </h4>
+                    </div>
+                    <div id="15" class="panel-collapse collapse">
+                      <div class="panel-body">You can find latest news at :https://medium.com/@Crowdnext/Crowdnext-disrupting-venture-capital-industry-with-blockchain-technology-159f82e2b2d</div>
+                    </div>
+                  </div>  
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#16" class="collapsed">What additional services that Crowdnext is providing?</a> </h4>
+                    </div>
+                    <div id="16" class="panel-collapse collapse">
+                      <div class="panel-body">Crowdnext helps its clients to understand and leverage blockchain technology through lectures, workshops, consulting, and development services. </div>
+                    </div>
+                  </div>  
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#17" class="collapsed">Who are the team behind the project?</a> </h4>
+                    </div>
+                    <div id="17" class="panel-collapse collapse">
+                      <div class="panel-body">The company is founded by Mr. Srini Chakwal, Founder & Fund Manager. Srini has more than 15 years of experience in Private Equity & Venture capital as well as extensive understanding of investing in and supporting businesses with high growth potential. <br> The team at Crowdnext is comprised of a balanced group of individuals that are Capable of providing a wealth of investment, entrepreneurial and corporate experience.</div>
+                    </div>
+                  </div>  
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#18" class="collapsed">Where can I get help or find out more info?</a> </h4>
+                    </div>
+                    <div id="18" class="panel-collapse collapse">
+                      <div class="panel-body">You can connect with us at info@Crowdnext.com</div>
+                    </div>
+                  </div> 
+                   <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#19" class="collapsed">When is the ICO, Pre-ICO starts and how long will they last?</a> </h4>
+                    </div>
+                    <div id="19" class="panel-collapse collapse">
+                      <div class="panel-body">ICO Start Date- Nov 2018 and End Date - Jan 2019</div>
+                    </div>
+                  </div> 
+                   <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#20" class="collapsed">How Is our ICO Solution Different?</a> </h4>
+                    </div>
+                    <div id="20" class="panel-collapse collapse">
+                      <div class="panel-body">We implement cryptography-based technologies to store immutable data. Our innovations allow individuals and institutions to secure digital assets in storage that are physically disconnected from the internet until the moment users want to connect it for its intended purpose. We help implement a complete supply chain on a blockchain to track the entire process at a single place.</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#21" class="collapsed">How to participate in an ICO?</a> </h4>
+                    </div>
+                    <div id="21" class="panel-collapse collapse">
+                      <div class="panel-body">Subscribe or get Whitelisted to the ICO website</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#22" class="collapsed">Is there a Whitelist?</a> </h4>
+                    </div>
+                    <div id="22" class="panel-collapse collapse">
+                      <div class="panel-body">Yes, you have to get Whitelisted to participate in this project</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#23" class="collapsed">Do you have a hard cap?</a> </h4>
+                    </div>
+                    <div id="23" class="panel-collapse collapse">
+                      <div class="panel-body">Yes, $100 Million USD</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#24" class="collapsed">Do you have a soft cap?</a> </h4>
+                    </div>
+                    <div id="24" class="panel-collapse collapse">
+                      <div class="panel-body">Yes, $50 Million USD</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#25" class="collapsed">What happens if your ICO didn't reach its minimum CAP?</a> </h4>
+                    </div>
+                    <div id="25" class="panel-collapse collapse">
+                      <div class="panel-body">Our soft Cap of $50 Million shall be achieved in Private Sale, through Redclays Capital and most of  our tokens will  be distributed on Private Sale only</div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#26" class="collapsed">How will the total supply of tokens be distributed?</a> </h4>
+                    </div>
+                    <div id="26" class="panel-collapse collapse">
+                      <div class="panel-body">20% Team & Advisory <br>10% Marketing, Advisements and other RP work <br> 70% Token Sale in Jan 2019</div>
+                    </div>
+                  </div>  
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#27" class="collapsed">How will the total supply of tokens be distributed?</a> </h4>
+                    </div>
+                    <div id="27" class="panel-collapse collapse">
+                      <div class="panel-body">20% Team & Advisory <br>10% Marketing, Advisements and other RP work <br> 70% Token Sale in Jan 2019</div>
+                    </div>
+                  </div>  
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#28" class="collapsed">On what exchanges will Crowdnext be listed?</a> </h4>
+                    </div>
+                    <div id="28" class="panel-collapse collapse">
+                      <div class="panel-body">Crowdnext shall be listed on  
+                        <ul>
+                          <li>HitBTC </li>
+                          <li>OKEx </li>
+                          <li>Hubbi </li>
+                          <li>Bibox </li>
+                          <li>Bithumb </li>
+                          <li>Kucoin </li>
+                          <li>Coinhub</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#29" class="collapsed">What is a token price?</a> </h4>
+                    </div>
+                    <div id="29" class="panel-collapse collapse">
+                      <div class="panel-body">US$ 1 = 1 CNXT
+                      </div>
+                    </div>
+                  </div> 
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#30" class="collapsed">Do you have a KYC?</a> </h4>
+                    </div>
+                    <div id="30" class="panel-collapse collapse">
+                      <div class="panel-body">No
+                      </div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#31" class="collapsed">How your Token Economics works?</a> </h4>
+                    </div>
+                    <div id="31" class="panel-collapse collapse">
+                      <div class="panel-body">
+                        <ul>
+                          <li>Token Sale on Pre-ICO (Mostly in Private Sale) 50% Discount</li>
+                          <li>After 20 Million Token 40% Discount</li>
+                          <li>After 30 Million Token 35% Discount</li>
+                          <li>After 40 Million Token 30% Discount</li>
+                          <li>After 50 Million Token 25%  Discount</li>
+                          <li>After 60 Million Token 20%  Discount</li>
+                          <li>After 70 Million Token 20%  Discount</li>
+                          <li>After 80 Million Token 10%  Discount</li>
+                          <li>After 90 Million Token 25%  Discount</li>
+                          <li>After 100 Million Token NO  Discount</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#32" class="collapsed">What is minimum size investment to participate in the Private Sell of Crowdnext Token? </a> </h4>
+                    </div>
+                    <div id="32" class="panel-collapse collapse">
+                      <div class="panel-body">US$ 100 Equivalent to Ether & Other Cryptocurrencies
+                      </div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#33" class="collapsed">What cryptocurrencies are accepted in the ICO?</a> </h4>
+                    </div>
+                    <div id="33" class="panel-collapse collapse">
+                      <div class="panel-body">BTC and ETH</div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#34" class="collapsed">What wallets can be used to contribute?</a> </h4>
+                    </div>
+                    <div id="34" class="panel-collapse collapse">
+                      <div class="panel-body">Crowdnext will have secured online Wallet and alternatively token holders to secure tokens at decentralized platform can use MyEtherWallet, Parity, MetaMask, Mist, imToken ( iOS& Android )</div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#35" class="collapsed">How I will receive my tokens after I send my contribution?</a> </h4>
+                    </div>
+                    <div id="35" class="panel-collapse collapse">
+                      <div class="panel-body">The tokens shall be directly transferred to their respective wallets</div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#36" class="collapsed">Is there any bonus for the private sell participants?</a> </h4>
+                    </div>
+                    <div id="36" class="panel-collapse collapse">
+                      <div class="panel-body">50% Discount</div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#37" class="collapsed">How much you are planning to rise in the pre-sale?</a> </h4>
+                    </div>
+                    <div id="37" class="panel-collapse collapse">
+                      <div class="panel-body">USD 50 Million</div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#38" class="collapsed">Will US residents be able to participate in the ICO? </a> </h4>
+                    </div>
+                    <div id="38" class="panel-collapse collapse">
+                      <div class="panel-body">No</div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#39" class="collapsed">When will I get the tokens?</a> </h4>
+                    </div>
+                    <div id="39" class="panel-collapse collapse">
+                      <div class="panel-body">To be announced later</div>
+                    </div>
+                  </div>
+                  <!-- According 3 -->
+                  <div class="panel panel-default">
+                    <div class="panel-heading">
+                      <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#40" class="collapsed">What happens to the tokens which are left unsold?</a> </h4>
+                    </div>
+                    <div id="40" class="panel-collapse collapse">
+                      <div class="panel-body">There are non-unsold tokens, We will generate only that much tokens which were already allocated during pre/private sale</div>
+                    </div>
+                  </div>
+                   
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+{% endblock content %}
+
+{% block top_footer %}
+<div class="album py-5">
+                <div class="container">
+
+                    <div class="row">
+                      <h2>Partners</h2>
+                      <div class="col-md-3">
+                          <div class="card mb-4 shadow-sm text-center" style="padding: 0 10px 0 10px">
+                            <img class="card-img-top" src="{% static 'images/Redclays.jpg' %}" alt="Card image cap" width="300" height="90">
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card mb-4 shadow-sm text-center">
+                            <img class="card-img-top" src="{% static 'images/pic_4.png' %}" alt="Card image cap" width="300" height="90">
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card mb-4 shadow-sm text-center">
+                            <img class="card-img-top" src="{% static 'images/pic_5.png' %}" alt="Card image cap" width="300" height="90">
+                          </div>
+                      </div>
+                      <div class="col-md-3">
+                          <div class="card mb-4 shadow-sm text-center">
+                            <img class="card-img-top" src="{% static 'images/pic_27.png' %}" alt="Card image cap" width="300" height="90">
+                          </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+{% endblock top_footer %}
